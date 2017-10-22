@@ -20,7 +20,7 @@ myre = re.compile(u'([\u2600-\u27BF])|([\uD83C][\uDF00-\uDFFF])|([\uD83D][\uDC00
 def tellme():
         same=0
         notsame=0
-        with open('nbs.csv','rb') as test, open('library_logistic_output.csv','wb') as output, open('train_set_y.csv','rb') as trainy:
+        with open('nb.csv','rb') as test, open('comparasion.csv','wb') as output, open('lo.csv','rb') as trainy:
             output.write("Id,Category")
             output.write("\n")
             test_reader=csv.reader(test,delimiter=',')
