@@ -1,18 +1,17 @@
 # comp551_project2
--Overview  
+#-Overview  
 
 This file is about instruction for how to run Naive.py. By defualt, we use unigram and we train all the train set to get the Model. 
 
 We produce a nb.csv to produce prediction for all test data in 'test_set_x.csv'
 
-How to use Naive.py
-
+-How to use Naive.py
        you can just run python Naive.py to have an nb.csv file for the result for test_set_x.py 
        
        If you want to change test or train file, by just replace 'train_set_x.csv' and 'train_set_y.csv' and 'test_set_x.csv' in the file.
        
 
-Function descriptions in details:
+#-Function descriptions in details:
 
 parase(train,result):
        This function is write to parse the raw train data.
@@ -26,7 +25,6 @@ parase(train,result):
        You can change theses two file in the parase function to change train input and trian result.
        
 gramProbability(train,result,n,Dicts,occur_plus_vocabulary,start,stop):
-
        This function calculate all char probability p(x|y) using formular p(x|y)=(times of gram x occurs in class y+1) \(vocabulay+total times of all grams occur in y )
        
        train result are two list descripted as in parase(train, result)
@@ -44,13 +42,11 @@ gramProbability(train,result,n,Dicts,occur_plus_vocabulary,start,stop):
        for example, if you want to use train set from 0 to half, you can write start as 0 and stop as half of the train data length
        
 classProbability(class_probability,start,stop,result):
-
        class_probability is an [float,float,float,float,float] to store the probability of the each class occurence in train set
        
 cross_validation(Dicts,n,occur_plus_vocabulary,class_probability,start,stop):
 
 tellme(Dicts,n,occur_plus_vocabulary,class_probability):
-
        predict the result for test set.
        
        Dicts is the dictionary we gathering from the train set. n is the n-gram.
